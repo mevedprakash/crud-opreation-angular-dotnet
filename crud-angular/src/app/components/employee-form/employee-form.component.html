@@ -1,0 +1,85 @@
+<div class="p-8 mt-4">
+  <div class="shadow p-6">
+    @if(isEdit){
+    <h4>Edit Employe Detail</h4>
+    }@else {
+    <h4>Create Employe</h4>
+    }
+    <form [formGroup]="employeeForm" (ngSubmit)="save()">
+      <div class="w-full flex flex-wrap">
+        <mat-form-field class="w-full">
+          <mat-label>Name</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="Name"
+            formControlName="name"
+          />
+        </mat-form-field>
+      </div>
+      <div class="w-full flex flex-wrap">
+        <mat-form-field class="w-full">
+          <mat-label>Email</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="Email"
+            formControlName="email"
+          />
+        </mat-form-field>
+      </div>
+      <div class="w-full flex flex-wrap">
+        <mat-form-field class="w-full">
+          <mat-label>Age</mat-label>
+          <input
+            type="number"
+            matInput
+            placeholder="Age"
+            formControlName="age"
+          />
+        </mat-form-field>
+      </div>
+      <div class="w-full flex flex-wrap">
+        <mat-form-field class="w-full">
+          <mat-label>Phone</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="Phone"
+            formControlName="phone"
+          />
+        </mat-form-field>
+      </div>
+      <div class="w-full flex flex-wrap">
+        <mat-form-field class="w-full">
+          <mat-label>Salary</mat-label>
+          <input
+            type="number"
+            matInput
+            placeholder="Sal"
+            formControlName="salary"
+          />
+        </mat-form-field>
+      </div>
+      <div class="flex justify-center">
+        @if(isEdit){
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="!employeeForm.valid"
+        >
+          Update
+        </button>
+        }@else {
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="!employeeForm.valid"
+        >
+          Add
+        </button>
+        }
+      </div>
+    </form>
+  </div>
+</div>
