@@ -41,3 +41,7 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+crud-dotnet-api/[Bb]in/
+crud-dotnet-api/[Oo]bj/
+crud-dotnet-api/.vs
+
