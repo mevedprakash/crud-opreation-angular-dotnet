@@ -8,5 +8,6 @@
         public string Phone { get; set; }
         public int Age { get; set; }
         public int Salary { get; set; }
+        public string Password { get; set; }
     }
 }
