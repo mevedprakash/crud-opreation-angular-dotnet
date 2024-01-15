@@ -3,7 +3,9 @@
     <mat-icon>home</mat-icon>
   </button>
   <span>CRUD App</span>
-  <span class="example-spacer"></span>
+  <button mat-raised-button class="mr-4" color="warn" (click)="logout()">
+    Logout
+  </button>
 </mat-toolbar>
 <div class="w-full px-36 py-8">
   <router-outlet></router-outlet>
