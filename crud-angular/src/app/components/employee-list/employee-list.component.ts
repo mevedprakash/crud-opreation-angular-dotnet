@@ -28,10 +28,6 @@ export class EmployeeListComponent {
     'action',
   ];
   ngOnInit() {
-    if (localStorage.getItem('token')) {
-      this.router.navigateByUrl('/login');
-      return;
-    }
     this.getEmployeeFromServer();
   }
   getEmployeeFromServer() {

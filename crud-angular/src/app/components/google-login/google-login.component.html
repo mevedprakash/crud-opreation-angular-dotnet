@@ -1,0 +1,13 @@
+<div class="flex justify-center">
+  <mat-card class="w-96 p-4">
+    @if(name){
+    <h4 class="text-xl">Hi, {{ name }}</h4>
+    }@else{
+    <h4 class="text-xl">Login with google</h4>
+    <asl-google-signin-button
+      type="standard"
+      size="medium"
+    ></asl-google-signin-button>
+    }
+  </mat-card>
+</div>
