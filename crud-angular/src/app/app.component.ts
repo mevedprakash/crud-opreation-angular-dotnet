@@ -13,7 +13,4 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class AppComponent {
   title = 'crud-angular';
-  logout(){
-    localStorage.removeItem("token");
-  }
 }

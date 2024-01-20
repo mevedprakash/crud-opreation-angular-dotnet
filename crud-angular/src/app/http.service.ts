@@ -10,11 +10,8 @@ export class HttpService {
   http = inject(HttpClient);
   constructor() {}
 
-
-
-
   getAllEmployee() {
-   console.log("getAllEmployee",localStorage.getItem("token"))
+    console.log('getAllEmployee', localStorage.getItem('token'));
     return this.http.get<IEmployee[]>(this.apiUrl + '/api/Employee');
   }
   createEmployee(employee: IEmployee) {
@@ -39,5 +36,13 @@ export class HttpService {
       email: email,
       password: password,
     });
+  }
+  googleLogin(idToken: string) {
+    return this.http.post<{ token: string }>(
+      this.apiUrl + '/api/Auth/google-login',
+      {
+        idToken: idToken,
+      }
+    );
   }
 }
